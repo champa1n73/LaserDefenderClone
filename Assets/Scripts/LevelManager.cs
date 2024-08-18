@@ -2,16 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class LevelManager : MonoBehaviour
 {
-    void Start()
-    {
-        Debug.Log(gameObject.activeInHierarchy);
-    }
     [SerializeField] float sceneLoadDelay = 2f;
+    ScoreKeeper scoreKeeper;
+
+    void Awake()
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+
     public void LoadGame()
     {
+        scoreKeeper.ResetScore();
         StartCoroutine(WaitAndLoad("Game", sceneLoadDelay));
     }
 

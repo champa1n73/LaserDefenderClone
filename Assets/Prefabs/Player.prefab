@@ -94,9 +94,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5434410938264222498}
   - component: {fileID: 4552511417771794306}
-  - component: {fileID: 274849448189952588}
   - component: {fileID: 1384931035024849410}
   - component: {fileID: -7054673427825770282}
+  - component: {fileID: 274849448189952588}
   - component: {fileID: -239029646381087399}
   - component: {fileID: 7188773032953888927}
   m_Layer: 6
@@ -152,23 +152,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &274849448189952588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1109407266639400711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2dc5aa8f5b0039b49a49b44e7c583410, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 10
-  paddingLeft: 0
-  paddingRight: 0
-  paddingTop: 5
-  paddingBottom: 2
 --- !u!50 &1384931035024849410
 Rigidbody2D:
   serializedVersion: 4
@@ -231,6 +214,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.006593734}
   serializedVersion: 2
   m_Radius: 0.37735775
+--- !u!114 &274849448189952588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109407266639400711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc5aa8f5b0039b49a49b44e7c583410, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 8
+  paddingLeft: 0
+  paddingRight: 0
+  paddingTop: 8
+  paddingBottom: 2
 --- !u!114 &-239029646381087399
 MonoBehaviour:
   m_ObjectHideFlags: 0

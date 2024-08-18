@@ -5,7 +5,27 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class ScoreKeeper : MonoBehaviour
 {
+    static ScoreKeeper instance;
     int currentScore;
+    void Awake()
+    {
+        ManageSingleton();
+    }
+
+    void ManageSingleton()
+    {
+        if(instance != null)
+        {
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     public int GetCurrentScore()
     {
         return currentScore;
@@ -15,7 +35,6 @@ public class ScoreKeeper : MonoBehaviour
     {
         currentScore += score;
         Mathf.Clamp(currentScore, 0, int.MaxValue);
-        Debug.Log(currentScore);
     }
 
     public void ResetScore()
